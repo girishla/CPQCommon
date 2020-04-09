@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Quote_Approved_Presented_before_Deny</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISCHANGED(SBQQ__Status__c) &amp;&amp; 
+NOT((ISPICKVAL(PRIORVALUE(SBQQ__Status__c),&quot;Approved&quot;)) ||(ISPICKVAL(PRIORVALUE(SBQQ__Status__c),&quot;Presented&quot;))) &amp;&amp; TEXT(SBQQ__Status__c) =&quot;Denied&quot;</errorConditionFormula>
+        <errorDisplayField>SBQQ__Status__c</errorDisplayField>
+        <errorMessage>Cannot set status to Denied as Quote is not in status Approved or Presented.</errorMessage>
+    </ValidationRule>

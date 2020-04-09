@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>NFR_Opportunity</fullName>
+        <active>true</active>
+        <errorConditionFormula>text(SBQQ__Quote__r.SBQQ__Opportunity2__r.Deal_Type__c) = &quot;NFR&quot; &amp;&amp; 
+SBQQ__ProductCode__c &lt;&gt; &quot;UIPNPOSNFR0&quot; &amp;&amp;
+SBQQ__ProductCode__c &lt;&gt; &quot;UIPNPSNUNFR&quot; &amp;&amp;
+SBQQ__ProductCode__c &lt;&gt; &quot;UIPNPARCUNF&quot; &amp;&amp;
+SBQQ__ProductCode__c &lt;&gt; &quot;UIPNPSCUNFR&quot; &amp;&amp;
+SBQQ__ProductCode__c &lt;&gt; &quot;UIPNPURNFR0&quot; &amp;&amp;
+SBQQ__ProductCode__c &lt;&gt; &quot;UIPNPURNFR0&quot; &amp;&amp;
+SBQQ__ProductCode__c &lt;&gt; &quot;UIPNPARNUNF&quot; &amp;&amp;
+SBQQ__ProductCode__c &lt;&gt; &quot;UIPRPANFR0&quot;</errorConditionFormula>
+        <errorMessage>Only NFR products can be added on this type of opportunity.</errorMessage>
+    </ValidationRule>

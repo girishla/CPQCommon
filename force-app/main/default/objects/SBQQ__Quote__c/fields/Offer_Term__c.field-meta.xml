@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Offer_Term__c</fullName>
+        <description>Define which term is displayed on the Quote Offer document. Possible values are: Agreement, EULA or None</description>
+        <externalId>false</externalId>
+        <formula>IF( SBQQ__Distributor__c &lt;&gt; &quot;&quot;, &quot;Distributor&quot;, 
+     IF(AND(Sold_to_Partner_Type__c  = &quot;Software License Broker&quot;,Business_Partner_Status__c = &quot;Good Standing&quot;),&quot;SLB&quot;,
+            IF(OR(Deal_Type__c = &quot;Resale&quot;, Deal_Type__c = &quot;Managed Service/BPO&quot;), &quot;Agreement&quot;,
+            &quot;EULA&quot;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Offer Term</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </CustomField>

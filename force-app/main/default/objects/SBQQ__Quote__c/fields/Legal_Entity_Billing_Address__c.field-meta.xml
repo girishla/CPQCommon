@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Legal_Entity_Billing_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Legal_Entity_New__c=&quot;UiPath INC&quot;,&quot;90 Park Ave 20th floor, New York, NY 10016, USA&quot;,
+IF(Legal_Entity_New__c=&quot;UiPath SRL&quot;, &quot;4 Vasile Alecsandri Str. and 11 Daniel Constantin Str, Building A, floors 5 and 6, 010613, 1st District, Bucharest, Romania&quot;,
+IF(Legal_Entity_New__c=&quot;UiPath KK&quot;,&quot;Otemachi Building, 1-6-1, 6, Otemachi, Chiyoda-ku, Tokyo, Japan, Tokyo 100-0004, Japan&quot;,
+IF(Legal_Entity_New__c=&quot;UiPath Netherlands BV&quot;,&quot;Strawinskylaan 4117 Office 5-111, Atrium Building North Tower, 1077 ZX Amsterdam, Netherlands&quot;,
+null))))</formula>
+        <label>Legal Entity Billing Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>India_Legal_Quote</fullName>
+        <filterScope>Queue</filterScope>
+        <label>India - Legal Team</label>
+        <queue>India_Legal</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </ListView>

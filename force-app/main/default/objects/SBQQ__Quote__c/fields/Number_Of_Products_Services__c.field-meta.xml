@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Number_Of_Products_Services__c</fullName>
+        <description>Roll-up summary to count the number of Products where Product Family &lt;&gt; Professional Service AND Product Family &lt;&gt; Training</description>
+        <externalId>false</externalId>
+        <label>Number Of Products &amp; Services</label>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Line_Product_Family__c</field>
+            <operation>notEqual</operation>
+            <value>Professional Service</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Line_Product_Family__c</field>
+            <operation>notEqual</operation>
+            <value>Training</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </CustomField>

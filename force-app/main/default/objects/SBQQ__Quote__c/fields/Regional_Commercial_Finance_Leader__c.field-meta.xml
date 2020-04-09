@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Regional_Commercial_Finance_Leader__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>SFSL-1260 - Relevant Regional Commercial Finance Leader for quote geography - Use in approval process</description>
+        <externalId>false</externalId>
+        <label>Regional Commercial Finance Leader</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Quotes2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </CustomField>

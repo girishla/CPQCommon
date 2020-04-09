@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>SBQQ__Field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field on Quote Line or Product Option object that is evaluated by this condition.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the field that should contain the value you enter in the Value field.</inlineHelpText>
+        <label>Field</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Product Code</fullName>
+                    <default>false</default>
+                    <label>Product Code</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__SpecialPrice__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__SpecialPrice__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__RegularPrice__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__RegularPrice__c</label>
+                </value>
+                <value>
+                    <fullName>Partner_or_Distributor_Discount__c</fullName>
+                    <default>false</default>
+                    <label>Partner_or_Distributor_Discount__c</label>
+                </value>
+                <value>
+                    <fullName>Account_Revenue_Discount__c</fullName>
+                    <default>false</default>
+                    <label>Account_Revenue_Discount__c</label>
+                </value>
+                <value>
+                    <fullName>Effective_Unit_Price__c</fullName>
+                    <default>false</default>
+                    <label>Effective_Unit_Price__c</label>
+                </value>
+                <value>
+                    <fullName>Deal_Type__c</fullName>
+                    <default>false</default>
+                    <label>Deal_Type__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__Type__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__Type__c</label>
+                </value>
+                <value>
+                    <fullName>Maintenance_Flag__c</fullName>
+                    <default>false</default>
+                    <label>Maintenance_Flag__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__Status__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__Status__c</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </CustomField>

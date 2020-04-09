@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Lock_Fields_for_not_Draft_or_Rejected</fullName>
+        <active>false</active>
+        <description>Prevents user from editing fields when quote status is not Draft or Rejected</description>
+        <errorConditionFormula>AND(
+NOT(ISPICKVAL(SBQQ__Status__c,&quot;Draft&quot;)),
+NOT(ISPICKVAL(SBQQ__Status__c,&quot;Rejected&quot;)),
+NOT(OR($Profile.Name = &quot;Sales Operations Admin&quot;, $Profile.Name = &quot;Sales Operations Advanced&quot;, $Profile.Name = &quot;Sales Operations Japan&quot;, $Profile.Name = &quot;Super Admin&quot;, $Profile.Name = &quot;System Administrator&quot;)),
+OR(
+ISCHANGED( Payment_Terms__c ),
+ISCHANGED( SBQQ__StartDate__c ),
+ISCHANGED( SBQQ__EndDate__c ),
+ISCHANGED( SBQQ__FirstSegmentTermEndDate__c ),
+ISCHANGED( SBQQ__CustomerDiscount__c ),
+ISCHANGED( SBQQ__TargetCustomerAmount__c )
+)
+)</errorConditionFormula>
+        <errorMessage>This record is locked. User is not be able to edit the quote in Non Draft/Rejected status</errorMessage>
+    </ValidationRule>

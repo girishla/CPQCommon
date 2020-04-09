@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Show_Offer_Columns__c</fullName>
+        <description>Define columns visibility on Quote Offer Document. Possible values are: Show All, Show Additional Discount Regular Unit Price, Show Additional Discount, None, Show Additional Discount Net Unit Price, Show Regular Unit Price Net Unit Price, Show Net Unit Price, Show Regular Unit Price</description>
+        <externalId>false</externalId>
+        <formula>IF(
+AND( Show_Additional_Discount__c, Show_Regular_Unit_Price__c , Show_Net_Unit_Price__c , Show_List_Price__c ) , &quot;Show All&quot;,
+IF(AND( Show_Additional_Discount__c, Show_Regular_Unit_Price__c , NOT(Show_Net_Unit_Price__c), NOT(Show_List_Price__c )), &quot;Show Additional Discount Regular Unit Price&quot;,
+IF(AND( Show_Additional_Discount__c, NOT(Show_Regular_Unit_Price__c) , NOT(Show_Net_Unit_Price__c), NOT(Show_List_Price__c ) ), &quot;Show Additional Discount&quot;,
+IF(AND( NOT(Show_Additional_Discount__c), NOT(Show_Regular_Unit_Price__c) , NOT(Show_Net_Unit_Price__c), NOT(Show_List_Price__c ) ), &quot;None&quot;,
+IF(AND( Show_Additional_Discount__c, NOT(Show_Regular_Unit_Price__c) , Show_Net_Unit_Price__c, NOT(Show_List_Price__c )), &quot;Show Additional Discount Net Unit Price&quot;,
+IF(AND( NOT(Show_Additional_Discount__c), Show_Regular_Unit_Price__c , Show_Net_Unit_Price__c, NOT(Show_List_Price__c )), &quot;Show Regular Unit Price Net Unit Price&quot;,
+IF(AND( NOT(Show_Additional_Discount__c), NOT(Show_Regular_Unit_Price__c) , Show_Net_Unit_Price__c, NOT(Show_List_Price__c )), &quot;Show Net Unit Price&quot;,
+IF(AND( NOT(Show_Additional_Discount__c), Show_Regular_Unit_Price__c , NOT(Show_Net_Unit_Price__c), NOT(Show_List_Price__c )), &quot;Show Regular Unit Price&quot;,
+IF(AND( Show_Additional_Discount__c, Show_Regular_Unit_Price__c , NOT(Show_Net_Unit_Price__c), Show_List_Price__c ), &quot;Show Additional Discount Regular Unit Price List Price&quot;,
+IF(AND( Show_Additional_Discount__c, NOT(Show_Regular_Unit_Price__c) , NOT(Show_Net_Unit_Price__c), Show_List_Price__c), &quot;Show Additional Discount List Price&quot;,
+IF(AND( Show_Additional_Discount__c, NOT(Show_Regular_Unit_Price__c) , Show_Net_Unit_Price__c, Show_List_Price__c ), &quot;Show Additional Discount Net Unit Price List Price&quot;,
+IF(AND( NOT(Show_Additional_Discount__c), NOT(Show_Regular_Unit_Price__c) , Show_Net_Unit_Price__c, Show_List_Price__c), &quot;Show Net Unit Price List Price&quot;,
+IF(AND( NOT(Show_Additional_Discount__c), Show_Regular_Unit_Price__c , NOT(Show_Net_Unit_Price__c), Show_List_Price__c), &quot;Show Regular Unit Price List Price&quot;,
+IF(AND( NOT(Show_Additional_Discount__c), NOT(Show_Regular_Unit_Price__c) , NOT(Show_Net_Unit_Price__c), Show_List_Price__c), &quot;Show List Price&quot;,
+IF(AND( NOT(Show_Additional_Discount__c), Show_Regular_Unit_Price__c, Show_Net_Unit_Price__c, Show_List_Price__c), &quot;Show All But Discount&quot;,
+IF(AND(Show_Additional_Discount__c, Show_Regular_Unit_Price__c , Show_Net_Unit_Price__c, NOT(Show_List_Price__c)), &quot;Show All But List Price&quot;,
+&quot;Show All&quot;
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Show Offer Columns</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </CustomField>

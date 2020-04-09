@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Is_UiPath_Core_Product_Or_Non_Production__c</fullName>
+        <description>Return TRUE if current quote line is a UiPath Core Product or UiPath Non-Production</description>
+        <externalId>false</externalId>
+        <formula>AND(SBQQ__Product__r.Vendor__c=&#39;UiPath&#39;,OR(SBQQ__ProductFamily__c=&#39;Core Product&#39;,SBQQ__ProductFamily__c=&#39;Non-Production&#39;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is UiPath Core Product Or Non Production</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </CustomField>

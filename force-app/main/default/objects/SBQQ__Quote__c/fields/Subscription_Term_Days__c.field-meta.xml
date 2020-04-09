@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Subscription_Term_Days__c</fullName>
+        <description>Different between Quote End Date and Quote Start Date. Used in approval process &#39;Selling Licenses for terms less than 1 year or above 3 years&#39;</description>
+        <externalId>false</externalId>
+        <formula>SBQQ__EndDate__c - SBQQ__StartDate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Subscription Term Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </CustomField>

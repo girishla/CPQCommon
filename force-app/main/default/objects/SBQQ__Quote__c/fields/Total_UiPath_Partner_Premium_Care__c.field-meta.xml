@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Total_UiPath_Partner_Premium_Care__c</fullName>
+        <description>Sum of &#39;Total UiPath Licenses&#39;, &#39;Total Partner Licenses&#39; and &#39;Total Premium Care&#39;. Used in Quote Offer document.</description>
+        <externalId>false</externalId>
+        <formula>Total_UiPath_Licenses__c +  Total_Partner_Licenses__c +  Total_Premium_Care__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total UiPath Partner Premium Care</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </CustomField>

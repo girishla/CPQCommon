@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Pro_Rated_Net_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+(SBQQ__StartDate__c &gt;TODAY()),
+(SBQQ__NetPrice__c * SBQQ__Quantity__c ),
+(SBQQ__EndDate__c - TODAY())*((SBQQ__NetPrice__c/365)* SBQQ__Quantity__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pro Rated Net Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </CustomField>

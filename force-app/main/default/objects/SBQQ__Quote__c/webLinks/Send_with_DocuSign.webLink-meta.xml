@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Send_with_DocuSign</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Send with DocuSign</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?serverUrl={!API.Partner_Server_URL_370}
+&amp;id={!SBQQ__Quote__c.Id}
+&amp;TemplateId={!SBQQ__Quote__c.Document_ID__c}
+&amp;DocuSignR1Id={!SBQQ__Quote__c.OwnerId}
+&amp;DocuSignR1Type=Signer
+&amp;DocuSignR1Role=Signer+1
+&amp;DocuSignR1RoutingOrder=1
+&amp;DocuSignR2Id={!SBQQ__Quote__c.SBQQ__PrimaryContactId__c}
+&amp;DocuSignR2Type=Signer
+&amp;DocuSignR2Role=Signer+2
+&amp;DocuSignR2RoutingOrder=2
+&amp;DocuSignEmailSubject=&quot;UiPath Internal Ref: {!SBQQ__Quote__c.Name}. Documents for your DocuSign Signature&quot;
+&amp;APDF=0
+&amp;DS7=7&amp;DocuSignExpireIn=14&amp;DocuSignRemindIn=2</url>
+    </WebLink>

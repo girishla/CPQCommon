@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Number_Of_PS_Training_Products__c</fullName>
+        <description>Count the number of Products where Product Family = Professional Service OR Product Family = Training</description>
+        <externalId>false</externalId>
+        <formula>Number_Of_PS_Products__c +  Number_Of_Training_Products__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number Of PS &amp; Training Products</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </CustomField>

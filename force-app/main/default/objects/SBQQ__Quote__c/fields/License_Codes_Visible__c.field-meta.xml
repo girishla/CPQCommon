@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>License_Codes_Visible__c</fullName>
+        <description>Define if License Codes is visible in Quote Line Editor. Use in QCP.</description>
+        <externalId>false</externalId>
+        <formula>IF(OR($Profile.Name = &quot;Sales Operations Admin&quot;, $Profile.Name = &quot;Sales Operations Advanced&quot;, $Profile.Name = &quot;Sales Operations Japan&quot;, $Profile.Name = &quot;Super Admin&quot;, $Profile.Name = &quot;System Administrator&quot;), TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>License Codes Visible</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </CustomField>

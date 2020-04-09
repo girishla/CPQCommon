@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>End_Date_Lock_For_Amendment_Quote</fullName>
+        <active>true</active>
+        <description>Quote End Date for Amended Quote is locked.</description>
+        <errorConditionFormula>AND(
+NOT(ISNEW()),
+ISCHANGED(SBQQ__EndDate__c),
+ISPICKVAL(SBQQ__Type__c, &quot;Amendment&quot;)
+)</errorConditionFormula>
+        <errorMessage>End Date is locked on an Amended quote type.</errorMessage>
+    </ValidationRule>

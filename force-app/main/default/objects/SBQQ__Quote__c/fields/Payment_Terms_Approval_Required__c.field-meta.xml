@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Payment_Terms_Approval_Required__c</fullName>
+        <externalId>false</externalId>
+        <formula>AND(TEXT(Payment_Terms__c) &lt;&gt;   Default_Payment_Terms__c,TEXT(Payment_Terms__c ) &lt;&gt; &#39;30 Days Net&#39;,TEXT(Payment_Terms__c ) &lt;&gt; &#39;45 Days Net&#39;,Payment_Terms_Days__c &gt; Default_Payment_Terms_Days__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Payment Terms Approval Required</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </CustomField>

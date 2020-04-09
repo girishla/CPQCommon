@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Sold_To_Partner_Empty_for_Resale</fullName>
+        <active>true</active>
+        <description>Cannot create a quote if Sold To Partner is empty for Resale Deal Type. Please create Partner Involvement on your opportunity.</description>
+        <errorConditionFormula>AND(
+ISNEW(),
+AND(TEXT(SBQQ__Opportunity2__r.Deal_Type__c) = &#39;Resale&#39;, ISBLANK(SBQQ__Opportunity2__r.Sold_to_Partner__c), NOT(TEXT( SBQQ__Type__c ) = &#39;Amendment&#39;))
+)</errorConditionFormula>
+        <errorMessage>Partner Involvement is required on the Opportunity for creating a quote where Deal Type is equal to Resale</errorMessage>
+    </ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+        <fullName>Japan_Sales_Geo_Quote</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Japan Sales Geo</label>
+        <queue>Japan_Sales_Geo</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </ListView>
